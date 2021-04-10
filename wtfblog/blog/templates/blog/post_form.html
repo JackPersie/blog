@@ -1,0 +1,12 @@
+{% extends "blog/base.html" %}
+{% block body %}
+
+<h1 id="update">{{post.title}}</h1>
+<form class = " update1 post-form" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button id="update22" type="submit"class = "save btn btn-default" >Save</button>
+</form>
+    <script>var editor = new MediumEditor('.editable');</script>
+ 
+{% endblock %}

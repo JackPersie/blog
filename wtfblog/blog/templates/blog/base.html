@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+
+    <!-- medium editor -->
+    <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+    
+    
+    <!-- css  -->
+    <link rel="stylesheet" href="{% static 'css/base3.css' %}">
+    
+    
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Londrina+Solid:wght@300&display=swap" rel="stylesheet"> 
+
+    <title>Donkey King Blog</title>
+</head>
+<body>
+    
+    <!-- nav bar for all the people -->
+    <nav class="ov-nav navbar navbar-expand-lg navbar-dark bg-transparent myfont cus-navbar">
+        <div class="container-fluid">
+            <ul class="navbar-nav ">
+                <li  class="navbar-item"><a id="login-font4" class="navbar-brand brandsize" href="{% url 'blog:post_list' %}">Home</a></li>
+                <li class="navbar-item"><a id="login-font4"class="nav-link" href="{% url 'blog:about' %}">About Me</a></li>
+                <li class="navbar-item"><a id="login-font4"class="nav-link" href="https://www.instagram.com">Instagram</a></li>
+                <li class="navbar-item"><a id="login-font4"class="nav-link" href="https://www.youtube.com">Youtube</a></li>
+                <li class="navbar-item"><a id="login-font4"class="nav-link" href="https://www.gmail.com">Gmail</a></li>
+            </ul>
+        </div>
+    
+
+    <!-- nav bar for all the people who are logged in. includes the above navbar too -->
+    <ul class="navbar-nav">
+        {% if user.is_authenticated %}
+        <li clas><a id="login-font11">Hey There ! {{ user.username|title }}</a></li>
+        <li class="navbar-item navbar-right"><a id="login-font5"class="nav-link" href="{% url 'blog:post_create' %}">Something Itching Your Brain {{ user.username|title }} ?</span></a></li>
+        <li class="navbar-item navbar-right"><a id="login-font5"class="nav-link" href="{% url 'blog:post_drafts' %}">Your Drafts</span></a></li>
+        <li class="navbar-item navbar-right"><a id="login-font5"class="nav-link" href="{% url 'logout' %}">Jump Out !</a></li>
+        
+        {% else %}
+        <li class="navbar-item navbar-right"" ><a id="login-font6" class="nav-link" href="{% url 'login' %}">Jump In !</a></li>
+        
+        {% endif %}
+        
+    </ul>
+
+    </nav>
+    <!-- loader -->
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span>
+      </div>
+  
+    <!-- block -->
+    <div class="container-fluid block">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="blog_posts">
+                    {% block body %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
+    <script>
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
+</body>
+</html>

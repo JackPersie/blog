@@ -1,0 +1,48 @@
+{% extends "blog/base.html" %}
+{% block body %}
+
+<h1 class="posttitle">{{post.title}}</h1> </h1>
+    {% if post.published_date %} 
+    <div  class = "date-postdate">
+       <p id="lis22"> Thrown to Internet on {{post.published_date}} by {{post.user|title}}</p>
+    </div>
+    {% else %}
+    <a id="det11" class="btn btn-default" href="{% url 'blog:post_publish' pk=post.pk %}">Publish ?</a>
+    {% endif %}
+    <div class="postcontent">
+    <p >{{post.body|safe|linebreaks}}</p>
+    </div>
+<!-- https://docs.djangoproject.com/en/3.0/ref/templates/builtins/#std:templatefilter-safe
+i kinda forgot filters and custom filters, stuff we wanna change at certain point 
+safe¶
+Marks a string as not requiring further HTML escaping prior to output. When autoescaping is off, this filter has no effect.
+whatever the fuck it means-->
+{% if user.is_authenticated %}
+    <a id="det1" class="  btn btn-default" href="{% url 'blog:post_update' pk=post.pk %}">Update
+    </a>
+    
+    <a id="det1" class="btn btn-default" href="{% url 'blog:post_delete' pk=post.pk %}">Delete
+    </a>
+{% endif %}
+    <hr>
+    <a id="det2"class="btn btn-default btn-comment" href="{% url 'blog:adding_comment' pk=post.pk %}">Comment</a>
+    <div id="comment" class="container-fluid">
+        <h1>What the world has to say this piece of art ?</h1>
+        {% for comment in post.comments.all %} <!-- comments is the related name we gave -->
+        <br>
+            {% if user.is_authenticated or comment.approved_comment %}
+                On {{comment.created_date}}
+                    {% if not comment.approved_comment %}
+                    <a id="det33" class=" btn btn-danger login-font3" href="{% url 'blog:approve_comment' pk=comment.pk %}">Approve Comment</a>
+                        <a id="det34" class="btn btn-danger login-font3" href="{% url 'blog:remove_comment' pk=comment.pk %}">Delete Comment</a>
+                        
+                    {% endif %}
+            <p>{{comment.user}} Said ,</p>
+            <p>{{comment.body|safe|linebreaks}}</p>
+            {% endif %}
+            {% empty %}
+        <p>No one snooped in yet !</p>
+        {% endfor %}
+    </div>
+
+{% endblock %}

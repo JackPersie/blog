@@ -1,0 +1,8 @@
+{% extends "blog/base.html" %}
+{% block body %}
+<form  method="post">
+    {% csrf_token %}
+    <h2 id="update11">Sure u wanna remove {{object}} from the internet ?</h2>
+    <input id="update21"class="btn btn-default" type="submit" value ="Trash 'em">
+</form>
+{% endblock %}

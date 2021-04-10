@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+{% block body %}
+
+<div class='jumbotron-fluid'>
+    <h2 class="login-font">Login my friend <br>(hint: Check your right ! )</h2>
+    <h4 class="login-font7">[Caution! You need credentials from me, <br> ping me on drenched.dipshit@gmail.com for <br> acc credentials]</h4>
+
+    {% if form.errors %} 
+    <!-- the form here refers to the views we imported from  from django.contrib.auth
+    my guess is it the default html page for that view is login.html 
+urls.py file project folder -->
+    <p class="login-font">Please enter your details properly.</p>
+    {% endif %}
+
+    <form class="login-font2" action="{% url 'login' %}" method="POST"> 
+        <!-- the name=login as we used in urls.py project folder -->
+        {% csrf_token %}
+        {{form.as_p }}
+        <input type="submit" id ="login-id" class="btn btn-default"value="Login">
+        <input type="hidden" name='next' value="{{next}}"> 
+        <!-- the next value which is going to be a hidden input
+        views.login will supply next value which will allow us to deal with what happens after someone logs in
+    we dealt with it for logout in urls itself. next_page -->
+    </form>
+</div>
+
+
+{% endblock %}

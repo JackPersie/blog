@@ -1,0 +1,18 @@
+{% extends "blog/base.html" %}
+{% block body %}
+
+<div class="makingcenter">
+    <h1 class="myfont22">
+        These Blogs keep on tuning in below !
+    </h1>
+    {% for post in post_list %}
+    <div class="thepost">
+        <h1><a id="list1" href="{% url 'blog:post_detail' pk=post.pk %}">{{post.title}}</a></h1>
+    </div>
+    <div>
+        <p id="llist2">Thrown to internet on : {{post.published_date|date:"D M Y" }}</p>
+    </div>
+    <a id="list2" href="{% url 'blog:post_detail' pk=post.pk %}">Comments : {{post.approve_comment.count}}</a>
+    {% endfor %}
+</div>
+{% endblock %}

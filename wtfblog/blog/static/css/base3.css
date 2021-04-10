@@ -1,0 +1,315 @@
+body {
+  background-image: url("luffy2.jpg");
+}
+.ov-nav {
+  border-bottom: 1px solid #8b1231;
+}
+.myfont {
+  font-family: "Indie Flower", cursive;
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: #8b1231;
+}
+.myfont22 {
+  font-family: "Indie Flower", cursive;
+  font-size: 35px;
+  margin-bottom: 50px;
+  color: #8b1231;
+}
+.twofont {
+  font-family: "Indie Flower", cursive;
+  font-size: 25px;
+  margin-top: 10px;
+  color: #8b1231;
+  width: 570px;
+  border: 1px solid #000000;
+}
+#twofonttwo {
+  color: #8b1231;
+}
+#lis22 {
+  color: #8b1231;
+  font-family: "Indie Flower", cursive;
+  font-size: 23px;
+}
+.login-font {
+  font-family: "Indie Flower", cursive;
+  font-size: 30px;
+  margin-top: 430px;
+  margin-bottom: 10px;
+  margin-left: -500px;
+  color: #8b1231;
+  text-align: center;
+}
+.login-font7 {
+  font-family: "Indie Flower", cursive;
+  font-size: 25px;
+  margin-top: -450px;
+  margin-bottom: 500px;
+  margin-left: 1400px;
+  color: #8b1231;
+  text-overflow: unset;
+  white-space: nowrap;
+  text-align: center;
+}
+.login-font2 {
+  font-family: "Indie Flower", cursive;
+  font-size: 20px;
+  margin-bottom: 500px;
+  color: #8b1231;
+  text-align: center;
+  margin-left: 1400px;
+  margin-top: -480px;
+}
+#login-id {
+  background-color: #8b1231;
+  color: black;
+  font-size: 20px;
+}
+.login-font3 {
+  font-family: "Indie Flower", cursive;
+  font-size: 30px;
+  color: white;
+}
+#login-font4 {
+  color: #8b1231;
+  margin-left: 10px;
+  font-size: 35px;
+}
+#login-font5 {
+  color: #8b1231;
+  margin-right: 40px;
+  font-size: 25px;
+  padding-right: 10px;
+}
+#login-font11 {
+  color: #8b1231;
+  align-content: center;
+  margin-right: 40px;
+  font-size: 25px;
+  padding-right: 10px;
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#login-font6 {
+  color: #8b1231;
+  font-size: 35px;
+  text-overflow: unset;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.makingcenter {
+  margin-left: 0;
+  margin-right: 0;
+  color: #8b1231;
+}
+#list1 {
+  color: #8b1231;
+  font-size: 50px;
+  font-family: "Indie Flower", cursive;
+}
+#list2 {
+  color: #8b1231;
+  font-family: "Indie Flower", cursive;
+  font-size: 25px;
+}
+#llist2 {
+  color: #8b1231;
+  font-family: "Indie Flower", cursive;
+  font-size: 20px;
+}
+
+.brandsize {
+  font-size: 40px;
+}
+.date-postdate {
+  color: #8b1231;
+}
+.posttitle {
+  font-family: "Indie Flower", cursive;
+  font-size: 60px;
+  color: #8b1231;
+}
+#det1 {
+  background-color: #8b1231;
+  color: black;
+  font-size: 23px;
+  font-family: "Indie Flower", cursive;
+}
+#det11 {
+  background-color: #8b1231;
+  color: black;
+  font-size: 23px;
+  font-family: "Indie Flower", cursive;
+}
+#det2 {
+  background-color: #8b1231;
+  color: black;
+  font-size: 23px;
+  font-family: "Indie Flower", cursive;
+  margin-left: 225px;
+  margin-top: -143px;
+}
+#det33 {
+  background-color: #8b1231;
+  color: black;
+  font-size: 23px;
+  font-family: "Indie Flower", cursive;
+  margin-left: -450px;
+  margin-top: -3px;
+}
+#det34 {
+  background-color: #8b1231;
+  color: black;
+  font-size: 23px;
+  font-family: "Indie Flower", cursive;
+  margin-left: -400px;
+  margin-bottom: 1px;
+}
+
+.postcontent {
+  font-family: "Indie Flower", cursive;
+  font-size: 30px;
+  text-align: justify;
+  color: #8b1231;
+  width: 570px;
+  margin-top: 10px;
+}
+#comment {
+  color: #8b1231;
+  text-align: justify;
+  font-family: "Indie Flower", cursive;
+  margin-left: 1400px;
+  margin-top: -800px;
+  font-size: 22px;
+  word-wrap: break-word;
+  width: 400px;
+  border: 1px solid #000000;
+}
+.update1 {
+  color: #8b1231;
+  font-family: "Indie Flower", cursive;
+  font-size: 25px;
+  width: 570px;
+  border: 1px solid #000000;
+}
+#update {
+  font-family: "Indie Flower", cursive;
+  font-size: 50px;
+  text-align: justify;
+  color: #8b1231;
+
+  margin-top: 10px;
+}
+#update11 {
+  font-family: "Indie Flower", cursive;
+  font-size: 30px;
+  text-align: justify;
+  color: #8b1231;
+
+  margin-top: 10px;
+}
+#update21 {
+  font-family: "Indie Flower", cursive;
+  font-size: 25px;
+  text-align: justify;
+  background-color: #8b1231;
+  color: black;
+  margin-top: 10px;
+}
+#update22 {
+  font-family: "Indie Flower", cursive;
+  font-size: 20px;
+  text-align: justify;
+  background-color: #8b1231;
+  color: black;
+  margin-top: 10px;
+}
+#comment21 {
+  font-family: "Indie Flower", cursive;
+  color: #8b1231;
+  font-size: 50px;
+}
+#comment22 {
+  font-family: "Indie Flower", cursive;
+  font-size: 20px;
+  text-align: justify;
+  background-color: #8b1231;
+  color: black;
+  margin-top: 10px;
+}
+#comment23 {
+  font-family: "Indie Flower", cursive;
+  color: #8b1231;
+  font-size: 25px;
+  width: 570px;
+  border: 1px solid #000000;
+}
+/* LOADER FOR SITE */
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #8b1231;
+  animation: loader 2s infinite ease;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #8b1231;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
